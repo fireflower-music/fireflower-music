@@ -10,7 +10,7 @@
     </parent>
     <groupId>iu.maue</groupId>
     <artifactId>fireflower-music</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>fireflower-music</name>
     <description>fireflower-music</description>
     <properties>
