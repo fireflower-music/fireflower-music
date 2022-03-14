@@ -1,1 +1,0 @@
-alter table `user` add column nickname varchar(255) null comment '昵称' after `username`;
