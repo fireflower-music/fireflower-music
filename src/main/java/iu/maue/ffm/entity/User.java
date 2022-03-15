@@ -1,26 +1,17 @@
 package iu.maue.ffm.entity;
 
 import iu.maue.ffm.enums.GenderEnum;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-import org.hibernate.Hibernate;
+import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
+import java.util.List;
 
 /**
  * 用户实体
  */
 @Entity
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Data
 public class User extends BaseEntity {
 
     /**
@@ -44,6 +35,14 @@ public class User extends BaseEntity {
      */
     private String nickname;
 
+    // TODO 待修改
+    // @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private List<Role> roles;
+
     /**
      * 锁定 1-是 0-否
      */
@@ -64,16 +63,4 @@ public class User extends BaseEntity {
      */
     private Date lastLoginTime;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        User user = (User) o;
-        return getId() != null && Objects.equals(getId(), user.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
 }

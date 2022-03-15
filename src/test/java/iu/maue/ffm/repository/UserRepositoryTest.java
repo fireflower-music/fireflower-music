@@ -35,8 +35,13 @@ class UserRepositoryTest {
         user.setLastLoginTime(new Date());
         userRepo.save(user);
 
-        List<User> users = userRepo.findByUsername("lindseyxcdh");
-        users.forEach(System.out::println);
+        User user1 = userRepo.getOneByUsername("lindseyxcdh");
+        System.out.println(user1);
+
+    }
+
+    @Test
+    void testUser() {
 
     }
 }
