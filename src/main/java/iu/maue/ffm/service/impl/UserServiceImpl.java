@@ -1,15 +1,12 @@
 package iu.maue.ffm.service.impl;
 
 import iu.maue.ffm.dto.UserDTO;
-import iu.maue.ffm.entity.User;
-import iu.maue.ffm.enums.GenderEnum;
 import iu.maue.ffm.mapper.UserMapper;
 import iu.maue.ffm.repository.UserRepository;
 import iu.maue.ffm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
