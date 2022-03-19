@@ -3,8 +3,6 @@ package iu.maue.ffm.vo;
 import iu.maue.ffm.enums.GenderEnum;
 import lombok.Data;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import java.util.Date;
 import java.util.List;
 
