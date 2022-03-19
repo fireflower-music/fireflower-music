@@ -24,19 +24,19 @@ class UserRepositoryTest {
 
     @Test
     void findByUsername() {
-        User user = new User();
-        user.setUsername("lindseyxcdh");
-        user.setNickname("lindsey");
-        user.setEnabled(true);
-        user.setLocked(false);
-        user.setPassword("woshitiancai");
-        user.setGender(GenderEnum.FEMALE);
-        user.setLastLoginIp("127.0.0.1");
-        user.setLastLoginTime(new Date());
-        userRepo.save(user);
-
-        User user1 = userRepo.getOneByUsername("lindseyxcdh");
-        System.out.println(user1);
+//        User user = new User();
+//        user.setUsername("lindseyxcdh");
+//        user.setNickname("lindsey");
+//        user.setEnabled(true);
+//        user.setLocked(false);
+//        user.setPassword("woshitiancai");
+//        user.setGender(GenderEnum.FEMALE);
+//        user.setLastLoginIp("127.0.0.1");
+//        user.setLastLoginTime(new Date());
+//        userRepo.save(user);
+//
+//        User user1 = userRepo.getOneByUsername("lindseyxcdh");
+//        System.out.println(user1);
 
     }
 
