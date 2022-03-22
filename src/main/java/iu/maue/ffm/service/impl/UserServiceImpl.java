@@ -1,7 +1,7 @@
 package iu.maue.ffm.service.impl;
 
-import iu.maue.ffm.dto.UserCreateDTO;
-import iu.maue.ffm.dto.UserDTO;
+import iu.maue.ffm.pojo.dto.UserCreateDTO;
+import iu.maue.ffm.pojo.dto.UserDTO;
 import iu.maue.ffm.entity.User;
 import iu.maue.ffm.exception.ExceptionEnum;
 import iu.maue.ffm.exception.BizException;

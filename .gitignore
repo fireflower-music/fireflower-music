@@ -33,3 +33,5 @@ build/
 .vscode/
 
 .env
+
+src/main/java/iu/maue/ffm/config/CrossConfig.java

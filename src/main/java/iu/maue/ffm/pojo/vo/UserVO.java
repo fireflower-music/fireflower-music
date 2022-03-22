@@ -1,16 +1,13 @@
-package iu.maue.ffm.dto;
+package iu.maue.ffm.pojo.vo;
 
 import iu.maue.ffm.enums.GenderEnum;
-import iu.maue.ffm.vo.RoleVO;
 import lombok.Data;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import java.util.Date;
 import java.util.List;
 
 @Data
-public class UserDTO {
+public class UserVO {
 
     private String id;
 

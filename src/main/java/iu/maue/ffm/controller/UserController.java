@@ -1,9 +1,9 @@
 package iu.maue.ffm.controller;
 
-import iu.maue.ffm.dto.UserCreateDTO;
+import iu.maue.ffm.pojo.dto.UserCreateDTO;
 import iu.maue.ffm.mapper.UserMapper;
 import iu.maue.ffm.service.UserService;
-import iu.maue.ffm.vo.UserVO;
+import iu.maue.ffm.pojo.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

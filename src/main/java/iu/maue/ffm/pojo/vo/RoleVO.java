@@ -1,11 +1,9 @@
-package iu.maue.ffm.dto;
+package iu.maue.ffm.pojo.vo;
 
 import lombok.Data;
 
 @Data
-public class RoleDTO {
-
-    private String id;
+public class RoleVO {
 
     private String name;
 

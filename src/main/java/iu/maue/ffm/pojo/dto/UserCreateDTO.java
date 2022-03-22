@@ -1,4 +1,4 @@
-package iu.maue.ffm.dto;
+package iu.maue.ffm.pojo.dto;
 
 import lombok.Data;
 
