@@ -1,16 +1,15 @@
 package iu.maue.ffm.controller;
 
-import iu.maue.ffm.pojo.dto.UserCreateDTO;
 import iu.maue.ffm.mapper.UserMapper;
-import iu.maue.ffm.service.UserService;
+import iu.maue.ffm.pojo.dto.UserCreateDTO;
 import iu.maue.ffm.pojo.vo.UserVO;
+import iu.maue.ffm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/user")
 public class UserController {
