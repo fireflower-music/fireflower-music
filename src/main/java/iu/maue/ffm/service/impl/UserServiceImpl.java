@@ -35,11 +35,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO getOneById(String id) {
         // TODO: Rebuild
-        User user = userRepository.getOneById(id);
-        if (user == null) {
+        Optional<User> userOptional = userRepository.getOneById(id);
+        if (!userOptional.isPresent()) {
             throw new BizException(ExceptionEnum.USER_NOT_FOUND);
         }
-        return userMapper.toDTO(user);
+        return userMapper.toDTO(userOptional.get());
     }
 
     @Override
@@ -54,10 +54,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO update(String id, UserUpdateRequest userUpdateRequest) {
         // TODO: Rebuild
-        User user = userRepository.getOneById(id);
-        if (user == null) {
+        Optional<User> userOptional = userRepository.getOneById(id);
+        if (!userOptional.isPresent()) {
             throw new BizException(ExceptionEnum.USER_NOT_FOUND);
         }
+        User user = userOptional.get();
         return userMapper.toDTO(
                 userRepository.save(userMapper.updateEntity(user, userUpdateRequest)));
     }
@@ -65,10 +66,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(String id) {
         // TODO: Rebuild
-        User user = userRepository.getOneById(id);
-        if (user == null) {
+        Optional<User> userOptional = userRepository.getOneById(id);
+        if (!userOptional.isPresent()) {
             throw new BizException(ExceptionEnum.USER_NOT_FOUND);
         }
+        User user = userOptional.get();
         userRepository.delete(user);
     }
 
