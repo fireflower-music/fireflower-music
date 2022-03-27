@@ -38,7 +38,6 @@ public class User extends BaseEntity implements UserDetails {
      */
     private String nickname;
 
-    // TODO 待修改
     @ManyToMany(fetch = FetchType.LAZY)
     // @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",

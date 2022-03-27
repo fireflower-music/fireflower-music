@@ -1,4 +1,4 @@
-package iu.maue.ffm.exception;
+package iu.maue.ffm.framework.exception;
 
 import lombok.Data;
 

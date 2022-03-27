@@ -1,7 +1,6 @@
 package iu.maue.ffm.pojo.dto;
 
 import iu.maue.ffm.enums.GenderEnum;
-import iu.maue.ffm.pojo.vo.RoleVO;
 import lombok.Data;
 
 import java.util.Date;
@@ -18,7 +17,7 @@ public class UserDTO {
 
     private String nickname;
 
-    private List<RoleVO> roleVOS;
+    private List<RoleDTO> roleDTOS;
 
     private Boolean locked;
 

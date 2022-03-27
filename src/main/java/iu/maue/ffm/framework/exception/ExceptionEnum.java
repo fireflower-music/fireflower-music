@@ -1,4 +1,4 @@
-package iu.maue.ffm.exception;
+package iu.maue.ffm.framework.exception;
 
 public enum ExceptionEnum {
     INNER_ERROR(500, "IN-SYSTEM ERRORS"),

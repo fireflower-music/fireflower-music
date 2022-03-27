@@ -1,8 +1,8 @@
-package iu.maue.ffm.handler;
+package iu.maue.ffm.framework.handler;
 
-import iu.maue.ffm.exception.ExceptionEnum;
-import iu.maue.ffm.exception.BizException;
-import iu.maue.ffm.exception.ErrorResponse;
+import iu.maue.ffm.framework.exception.ExceptionEnum;
+import iu.maue.ffm.framework.exception.BizException;
+import iu.maue.ffm.framework.exception.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.nio.file.AccessDeniedException;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -42,12 +44,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse methodArgumentNotValidException(MethodArgumentNotValidException e) {
-        ErrorResponse errorResponse = new ErrorResponse();
-        errorResponse.setCode(ExceptionEnum.BAD_REQUEST.getCode());
+    public List<ErrorResponse> methodArgumentNotValidException(MethodArgumentNotValidException e) {
+        List<ErrorResponse> errorResponses = new ArrayList<>();
         e.getBindingResult().getAllErrors().forEach(error -> {
+            ErrorResponse errorResponse = new ErrorResponse();
+            errorResponse.setCode(ExceptionEnum.BAD_REQUEST.getCode());
             errorResponse.setMessage(error.getDefaultMessage());
+            errorResponses.add(errorResponse);
         });
-        return errorResponse;
+        return errorResponses;
     }
 }

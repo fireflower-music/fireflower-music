@@ -1,18 +1,25 @@
 package iu.maue.ffm.service;
 
-import iu.maue.ffm.pojo.dto.UserCreateDTO;
-import iu.maue.ffm.pojo.dto.UserDTO;
 import iu.maue.ffm.entity.User;
+import iu.maue.ffm.pojo.dto.UserDTO;
+import iu.maue.ffm.pojo.request.UserCreateRequest;
+import iu.maue.ffm.pojo.request.UserUpdateRequest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UserDetailsService;
-
-import java.util.List;
 
 
 public interface UserService extends UserDetailsService {
 
-    List<UserDTO> list();
+    Page<UserDTO> search(Pageable pageable);
 
-    UserDTO create(UserCreateDTO userCreateDTO);
+    UserDTO getOneById(String id);
+
+    UserDTO create(UserCreateRequest userCreateRequest);
+
+    UserDTO update(String id, UserUpdateRequest userUpdateRequest);
+
+    void delete(String id);
 
     @Override
     User loadUserByUsername(String username);

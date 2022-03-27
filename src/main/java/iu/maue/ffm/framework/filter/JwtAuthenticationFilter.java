@@ -1,12 +1,12 @@
-package iu.maue.ffm.filter;
+package iu.maue.ffm.framework.filter;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import iu.maue.ffm.config.SecurityConfig;
+import iu.maue.ffm.framework.config.SecurityConfig;
 import iu.maue.ffm.entity.User;
-import iu.maue.ffm.exception.ExceptionEnum;
-import iu.maue.ffm.exception.BizException;
+import iu.maue.ffm.framework.exception.ExceptionEnum;
+import iu.maue.ffm.framework.exception.BizException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

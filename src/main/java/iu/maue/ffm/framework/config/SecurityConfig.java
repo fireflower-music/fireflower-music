@@ -1,8 +1,8 @@
-package iu.maue.ffm.config;
+package iu.maue.ffm.framework.config;
 
-import iu.maue.ffm.exception.RestAuthenticationEntryPoint;
-import iu.maue.ffm.filter.JwtAuthenticationFilter;
-import iu.maue.ffm.filter.JwtAuthorizationFilter;
+import iu.maue.ffm.framework.exception.RestAuthenticationEntryPoint;
+import iu.maue.ffm.framework.filter.JwtAuthenticationFilter;
+import iu.maue.ffm.framework.filter.JwtAuthorizationFilter;
 import iu.maue.ffm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

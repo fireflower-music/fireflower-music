@@ -1,8 +1,8 @@
-package iu.maue.ffm.filter;
+package iu.maue.ffm.framework.filter;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import iu.maue.ffm.config.SecurityConfig;
+import iu.maue.ffm.framework.config.SecurityConfig;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
